@@ -18,7 +18,8 @@
     "nodemon": "^2.0.20"
   },
   "scripts": {
+    "dev": "concurrently \"tsc -w\" \"nodemon dist/js/app.js\"",
     "build": "tsc",
-    "start": "concurrently \"tsc -w\" \"nodemon dist/js/app.js\""
+    "start": "node dist/js/app.js"
   }
 }
