@@ -13,11 +13,11 @@ app.use(todoRoutes)
 
 
 const uri: string = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@yuhee2020.ep9fyfa.mongodb.net/?retryWrites=true&w=majority`
-const options = { useNewUrlParser: true, useUnifiedTopology: true }
-mongoose.set("useFindAndModify", false)
+// const options = { useNewUrlParser: true, useUnifiedTopology: true }
+mongoose.set('strictQuery', false)
 
 mongoose
-    .connect(uri, options)
+    .connect(uri)
     .then(() =>
         app.listen(PORT, () =>
             console.log(`Server running on http://localhost:${PORT}`)
