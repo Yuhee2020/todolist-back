@@ -3,6 +3,8 @@ import mongoose from "mongoose"
 import cors from "cors"
 import todoRoutes from "./rotes"
 
+require('dotenv').config()
+
 const app: Express = express()
 
 const PORT: string | number = process.env.PORT || 4000
@@ -11,7 +13,10 @@ app.use(cors())
 app.use(express.json());
 app.use(todoRoutes)
 
-const uri: string = `mongodb+srv://yuhee2020:ab19742285256082@yuhee2020.ep9fyfa.mongodb.net/?retryWrites=true&w=majority`
+const mongoUser=process.env.MONGO_USER
+const mongoPass=process.env.MONGO_PASSWORD
+
+const uri: string = `mongodb+srv://${mongoUser}:${mongoPass}@yuhee2020.ep9fyfa.mongodb.net/?retryWrites=true&w=majority`
 mongoose.set('strictQuery', false)
 
 mongoose
