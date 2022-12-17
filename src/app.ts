@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(todoRoutes)
 
 
-const uri: string = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@yuhee2020.ep9fyfa.mongodb.net/?retryWrites=true&w=majority`
+const uri: string = `mongodb+srv://yuhee2020:ab19742285256082@yuhee2020.ep9fyfa.mongodb.net/?retryWrites=true&w=majority`
 mongoose.set('strictQuery', false)
 
 mongoose
