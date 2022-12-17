@@ -14,8 +14,8 @@ app.use(cors())
 app.use(express.json());
 app.use(todoRoutes)
 
-// const mongoUser=process.env.MONGO_USER
-// const mongoPass=process.env.MONGO_PASSWORD
+const mongoUser=process.env.MONGO_USER
+const mongoPass=process.env.MONGO_PASSWORD
 
 const uri: string = `mongodb+srv://yuhee2020:ab19742285256082@yuhee2020.ep9fyfa.mongodb.net/?retryWrites=true&w=majority`
 mongoose.set('strictQuery', false)
@@ -29,7 +29,7 @@ mongoose
     )
     .then(()=>{
     app.get('/', (req, res) => {
-        res.send('Hello World!')
+        res.send('Hello everybody!')
     })
 })
     .catch(error => {
