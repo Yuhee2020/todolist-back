@@ -2,8 +2,9 @@ import express, { Express } from "express"
 import mongoose from "mongoose"
 import cors from "cors"
 import todoRoutes from "./rotes"
+import * as dotenv from 'dotenv'
 
-require('dotenv').config()
+dotenv.config()
 
 const app: Express = express()
 
