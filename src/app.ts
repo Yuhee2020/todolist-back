@@ -17,7 +17,7 @@ app.use(todoRoutes)
 const mongoUser=process.env.MONGO_USER
 const mongoPass=process.env.MONGO_PASSWORD
 
-const uri: string = `mongodb+srv://${mongoUser}:${mongoPass}@yuhee2020.ep9fyfa.mongodb.net/?retryWrites=true&w=majority`
+const uri: string = `mongodb+srv://yuhee2020:ab19742285256082@yuhee2020.ep9fyfa.mongodb.net/?retryWrites=true&w=majority`
 mongoose.set('strictQuery', false)
 
 mongoose
